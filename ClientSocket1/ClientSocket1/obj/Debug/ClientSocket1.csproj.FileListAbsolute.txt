@@ -1,0 +1,8 @@
+c:\users\wzp\documents\visual studio 2015\Projects\ClientSocket1\ClientSocket1\bin\Debug\ClientSocket1.exe.config
+c:\users\wzp\documents\visual studio 2015\Projects\ClientSocket1\ClientSocket1\bin\Debug\ClientSocket1.exe
+c:\users\wzp\documents\visual studio 2015\Projects\ClientSocket1\ClientSocket1\bin\Debug\ClientSocket1.pdb
+c:\users\wzp\documents\visual studio 2015\Projects\ClientSocket1\ClientSocket1\obj\Debug\ClientSocket1.Form1.resources
+c:\users\wzp\documents\visual studio 2015\Projects\ClientSocket1\ClientSocket1\obj\Debug\ClientSocket1.Properties.Resources.resources
+c:\users\wzp\documents\visual studio 2015\Projects\ClientSocket1\ClientSocket1\obj\Debug\ClientSocket1.csproj.GenerateResource.Cache
+c:\users\wzp\documents\visual studio 2015\Projects\ClientSocket1\ClientSocket1\obj\Debug\ClientSocket1.exe
+c:\users\wzp\documents\visual studio 2015\Projects\ClientSocket1\ClientSocket1\obj\Debug\ClientSocket1.pdb
