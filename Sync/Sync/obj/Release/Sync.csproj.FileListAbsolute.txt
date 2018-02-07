@@ -1,0 +1,14 @@
+C:\Users\wzp\Documents\Visual Studio 2015\Projects\Sync\Sync\bin\Release\Sync.exe.config
+C:\Users\wzp\Documents\Visual Studio 2015\Projects\Sync\Sync\bin\Release\Sync.exe
+C:\Users\wzp\Documents\Visual Studio 2015\Projects\Sync\Sync\bin\Release\Sync.pdb
+C:\Users\wzp\Documents\Visual Studio 2015\Projects\Sync\Sync\bin\Release\Microsoft.Synchronization.dll
+C:\Users\wzp\Documents\Visual Studio 2015\Projects\Sync\Sync\bin\Release\Microsoft.Synchronization.Files.dll
+C:\Users\wzp\Documents\Visual Studio 2015\Projects\Sync\Sync\bin\Release\Microsoft.Synchronization.MetadataStorage.dll
+C:\Users\wzp\Documents\Visual Studio 2015\Projects\Sync\Sync\bin\Release\Microsoft.Synchronization.xml
+C:\Users\wzp\Documents\Visual Studio 2015\Projects\Sync\Sync\bin\Release\Microsoft.Synchronization.Files.xml
+C:\Users\wzp\Documents\Visual Studio 2015\Projects\Sync\Sync\bin\Release\Microsoft.Synchronization.MetadataStorage.xml
+C:\Users\wzp\Documents\Visual Studio 2015\Projects\Sync\Sync\obj\Release\Sync.FrmSync.resources
+C:\Users\wzp\Documents\Visual Studio 2015\Projects\Sync\Sync\obj\Release\Sync.Properties.Resources.resources
+C:\Users\wzp\Documents\Visual Studio 2015\Projects\Sync\Sync\obj\Release\Sync.csproj.GenerateResource.Cache
+C:\Users\wzp\Documents\Visual Studio 2015\Projects\Sync\Sync\obj\Release\Sync.exe
+C:\Users\wzp\Documents\Visual Studio 2015\Projects\Sync\Sync\obj\Release\Sync.pdb

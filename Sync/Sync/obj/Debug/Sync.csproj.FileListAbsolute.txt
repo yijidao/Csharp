@@ -1,0 +1,15 @@
+c:\users\wzp\documents\visual studio 2015\Projects\Sync\Sync\bin\Debug\Sync.exe.config
+c:\users\wzp\documents\visual studio 2015\Projects\Sync\Sync\obj\Debug\Sync.csprojResolveAssemblyReference.cache
+c:\users\wzp\documents\visual studio 2015\Projects\Sync\Sync\obj\Debug\Sync.Properties.Resources.resources
+c:\users\wzp\documents\visual studio 2015\Projects\Sync\Sync\obj\Debug\Sync.csproj.GenerateResource.Cache
+c:\users\wzp\documents\visual studio 2015\Projects\Sync\Sync\bin\Debug\Sync.exe
+c:\users\wzp\documents\visual studio 2015\Projects\Sync\Sync\bin\Debug\Sync.pdb
+c:\users\wzp\documents\visual studio 2015\Projects\Sync\Sync\bin\Debug\Microsoft.Synchronization.dll
+c:\users\wzp\documents\visual studio 2015\Projects\Sync\Sync\bin\Debug\Microsoft.Synchronization.Files.dll
+c:\users\wzp\documents\visual studio 2015\Projects\Sync\Sync\bin\Debug\Microsoft.Synchronization.MetadataStorage.dll
+c:\users\wzp\documents\visual studio 2015\Projects\Sync\Sync\bin\Debug\Microsoft.Synchronization.xml
+c:\users\wzp\documents\visual studio 2015\Projects\Sync\Sync\bin\Debug\Microsoft.Synchronization.Files.xml
+c:\users\wzp\documents\visual studio 2015\Projects\Sync\Sync\bin\Debug\Microsoft.Synchronization.MetadataStorage.xml
+c:\users\wzp\documents\visual studio 2015\Projects\Sync\Sync\obj\Debug\Sync.exe
+c:\users\wzp\documents\visual studio 2015\Projects\Sync\Sync\obj\Debug\Sync.pdb
+c:\users\wzp\documents\visual studio 2015\Projects\Sync\Sync\obj\Debug\Sync.FrmSync.resources
