@@ -13,3 +13,18 @@ c:\users\wzp\documents\visual studio 2015\Projects\Sync\Sync\bin\Debug\Microsoft
 c:\users\wzp\documents\visual studio 2015\Projects\Sync\Sync\obj\Debug\Sync.exe
 c:\users\wzp\documents\visual studio 2015\Projects\Sync\Sync\obj\Debug\Sync.pdb
 c:\users\wzp\documents\visual studio 2015\Projects\Sync\Sync\obj\Debug\Sync.FrmSync.resources
+D:\git\Csharp\Sync\Sync\bin\Debug\Sync.exe.config
+D:\git\Csharp\Sync\Sync\obj\Debug\Sync.exe
+D:\git\Csharp\Sync\Sync\obj\Debug\Sync.pdb
+D:\git\Csharp\Sync\Sync\bin\Debug\Sync.exe
+D:\git\Csharp\Sync\Sync\bin\Debug\Sync.pdb
+D:\git\Csharp\Sync\Sync\bin\Debug\Microsoft.Synchronization.dll
+D:\git\Csharp\Sync\Sync\bin\Debug\Microsoft.Synchronization.Files.dll
+D:\git\Csharp\Sync\Sync\bin\Debug\Microsoft.Synchronization.MetadataStorage.dll
+D:\git\Csharp\Sync\Sync\bin\Debug\Microsoft.Synchronization.xml
+D:\git\Csharp\Sync\Sync\bin\Debug\Microsoft.Synchronization.Files.xml
+D:\git\Csharp\Sync\Sync\bin\Debug\Microsoft.Synchronization.MetadataStorage.xml
+D:\git\Csharp\Sync\Sync\obj\Debug\Sync.csprojResolveAssemblyReference.cache
+D:\git\Csharp\Sync\Sync\obj\Debug\Sync.FrmSync.resources
+D:\git\Csharp\Sync\Sync\obj\Debug\Sync.Properties.Resources.resources
+D:\git\Csharp\Sync\Sync\obj\Debug\Sync.csproj.GenerateResource.Cache
