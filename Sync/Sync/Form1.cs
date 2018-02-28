@@ -19,6 +19,8 @@ namespace Sync
     {
         XmlDocument G_Xml;
         string G_XmlUrl;
+        bool G_Complete = false;
+
         public FrmSync()
         {
             InitializeComponent();
@@ -36,11 +38,30 @@ namespace Sync
                 }
             }
             btn_Sync.Click += OnClick;
+
+            label1.ForeColor = Color.FromArgb(255, 255, 255);
+            label1.BackColor = Color.FromArgb(0, 172, 193);
+            label2.ForeColor = Color.FromArgb(255, 255, 255);
+            label2.BackColor = Color.FromArgb(0, 172, 193);
+            label3.ForeColor = Color.FromArgb(255, 255, 255);
+            label3.BackColor = Color.FromArgb(0, 172, 193);
+
+            btn_Sync.ForeColor = Color.FromArgb(255, 255, 255);
+            btn_Sync.BackColor = Color.FromArgb(121, 134, 203);
+            btn_Sync.FlatAppearance.BorderColor = Color.FromArgb(121, 134, 203);
+            btn_Sync.FlatAppearance.MouseOverBackColor = Color.FromArgb(57, 73, 171);
+            btn_Sync.FlatAppearance.MouseDownBackColor = Color.FromArgb(57, 73, 171);
+
+            rtx_Log.AppendText("请配置好源目录和目标目录后，点击开始同步进行同步...");
         }
 
         public void Sync()
         {
-            //btn_Sync.Enabled = false;
+            print("同步中", true, true);
+            G_Complete = false;
+            new Thread(run1).Start();
+
+
             setBtnSyncEnable(false);
             string l_SourcePath = tbx_Source.Text;
             string l_DistinationPath = tbx_Destination.Text;
@@ -50,9 +71,7 @@ namespace Sync
             if (string.IsNullOrWhiteSpace(l_SourcePath) || string.IsNullOrWhiteSpace(l_DistinationPath) ||
                 !Directory.Exists(l_SourcePath) || !Directory.Exists(l_DistinationPath))
             {
-                //rtx_Log.AppendText("无效目录");
                 print("无效目录");
-                //btn_Sync.Enabled = true;
                 setBtnSyncEnable(true);
                 return;
             }
@@ -118,6 +137,7 @@ namespace Sync
                     l_DestinationProvider.Dispose();
                 //btn_Sync.Enabled = true;
                 setBtnSyncEnable(true);
+                G_Complete = true;
             }
         }
 
@@ -144,19 +164,15 @@ namespace Sync
             switch (args.ChangeType)
             {
                 case ChangeType.Create:
-                   //rtx_Log.AppendText("\r\n--创建文件：" + args.NewFilePath);
                     print("\r\n--创建文件：" + args.NewFilePath);
                     break;
                 case ChangeType.Delete:
-                   //rtx_Log.AppendText("\r\n--删除文件：" + args.OldFilePath);
                     print("\r\n--删除文件：" + args.OldFilePath);
                     break;
                 case ChangeType.Update:
-                   //rtx_Log.AppendText("\r\n--更新文件：" + args.OldFilePath);
                     print("\r\n--更新文件：" + args.OldFilePath);
                     break;
                 case ChangeType.Rename:
-                   //rtx_Log.AppendText("\r\n--重命名文件：" + args.OldFilePath + "修改为" + args.NewFilePath);
                     print("\r\n--重命名文件：" + args.OldFilePath + "修改为" + args.NewFilePath);
                     break;
             }
@@ -164,7 +180,6 @@ namespace Sync
 
         public void OnSkippedChange(object sender, SkippedChangeEventArgs args)
         {
-           //rtx_Log.AppendText("\r\n--发生错误：" + (!string.IsNullOrEmpty(args.CurrentFilePath) ? args.CurrentFilePath : args.NewFilePath) + "跳过文件" + args.ChangeType.ToString().ToUpper());
             print("\r\n--发生错误：" + (!string.IsNullOrEmpty(args.CurrentFilePath) ? args.CurrentFilePath : args.NewFilePath) + "跳过文件" + args.ChangeType.ToString().ToUpper());
             if (args.Exception != null)
                rtx_Log.AppendText("[" + args.Exception.Message + "]");
@@ -173,14 +188,12 @@ namespace Sync
         public void OnItemConflicting(object sender, ItemConflictingEventArgs args)
         {
             args.SetResolutionAction(ConflictResolutionAction.SourceWins);
-           //rtx_Log.AppendText("\r\n--Concurrency conflict detected for item" + args.DestinationChange.ItemId.ToString());
             print("\r\n--Concurrency conflict detected for item" + args.DestinationChange.ItemId.ToString());
         }
 
         public void OnItemConstraint(object sender, ItemConstraintEventArgs args)
         {
             args.SetResolutionAction(ConstraintConflictResolutionAction.SourceWins);
-           //rtx_Log.AppendText("\r\n--Contraint conflict detected for iem" + args.DestinationChange.ItemId.ToString());
             print("\r\n--Contraint conflict detected for iem" + args.DestinationChange.ItemId.ToString());
         }
         public void OnDetectedChange(object sender, DetectedChangesEventArgs args)
@@ -190,12 +203,53 @@ namespace Sync
             rtx_Log.AppendText("\r\n--TotalFileSize" + args.TotalFileSize);
         }
 
-        public void print(string p_message)
+        public void print(string p_message, bool p_Clear = false, bool p_FirstLine = false, bool p_Complete = false)
         {
             if(rtx_Log.InvokeRequired)
             {
-                Action<string> messageDelegate = (x) => { rtx_Log.AppendText(x); };
-                rtx_Log.Invoke(messageDelegate, p_message);
+                if(p_Clear)
+                {
+                    Action messageDelegate1 = () => { rtx_Log.Clear(); };
+                    rtx_Log.Invoke(messageDelegate1);
+                }
+                if (p_FirstLine)
+                {
+                    Action<string> messageDelegate1 = (x) => 
+                    {
+                        int length = p_message.Length;
+                        if(!p_Complete)
+                        {
+                            if (rtx_Log.Lines.Length > 0)
+                            {
+                                if (p_message.Length == 9)
+                                {
+                                    rtx_Log.Select(0, 9);
+                                    rtx_Log.SelectedText = "同步中.";
+                                }
+                                else
+                                {
+                                    rtx_Log.Select(0, length);
+                                    rtx_Log.SelectedText = p_message + ".";
+                                }
+                            }
+                            else
+                            {
+                                rtx_Log.AppendText(x);
+                            }
+                        }
+                        else
+                        {
+                            rtx_Log.Select(0, rtx_Log.Lines[0].Length);
+                            rtx_Log.SelectedText = p_message;
+                        }
+                    };
+                    rtx_Log.Invoke(messageDelegate1, p_message);
+                }
+                if(!p_FirstLine)
+                {
+                    Action<string> messageDelegate = (x) => { rtx_Log.AppendText(x); };
+                    rtx_Log.Invoke(messageDelegate, p_message);
+                }
             }
             else
             {
@@ -207,13 +261,42 @@ namespace Sync
         {
             if(btn_Sync.InvokeRequired)
             {
-                Action<bool> enableDelegate = (x) => { btn_Sync.Enabled = x; };
+                Action<bool> enableDelegate = (x) => 
+                {
+                    btn_Sync.Enabled = x;
+                    if (p_Value)
+                    {
+                        btn_Sync.Text = "开始同步";
+                    }
+                    else
+                    {
+                        btn_Sync.Text = "同步中...";
+                    }
+                };
                 btn_Sync.Invoke(enableDelegate, p_Value);
             }
             else
             {
                 btn_Sync.Enabled = p_Value;
             }
+        }
+
+        private void run1()
+        {
+            while(!G_Complete)
+            {
+                Thread.Sleep(1000);
+                string s = "";
+                Action messageDelegate = () => { s = rtx_Log.Lines[0]; };
+                rtx_Log.Invoke(messageDelegate);
+                print(s, false, true);
+            }
+            print("--同步完成", false, true, true);
+        }
+
+        private void FrmSync_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

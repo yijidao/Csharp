@@ -24,7 +24,7 @@ D:\git\Csharp\Sync\Sync\bin\Debug\Microsoft.Synchronization.MetadataStorage.dll
 D:\git\Csharp\Sync\Sync\bin\Debug\Microsoft.Synchronization.xml
 D:\git\Csharp\Sync\Sync\bin\Debug\Microsoft.Synchronization.Files.xml
 D:\git\Csharp\Sync\Sync\bin\Debug\Microsoft.Synchronization.MetadataStorage.xml
-D:\git\Csharp\Sync\Sync\obj\Debug\Sync.csprojResolveAssemblyReference.cache
 D:\git\Csharp\Sync\Sync\obj\Debug\Sync.FrmSync.resources
 D:\git\Csharp\Sync\Sync\obj\Debug\Sync.Properties.Resources.resources
 D:\git\Csharp\Sync\Sync\obj\Debug\Sync.csproj.GenerateResource.Cache
+D:\git\Csharp\Sync\Sync\obj\Debug\Sync.csprojResolveAssemblyReference.cache

@@ -41,22 +41,23 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(53, 36);
+            this.label1.Location = new System.Drawing.Point(31, 12);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(41, 12);
+            this.label1.Padding = new System.Windows.Forms.Padding(2, 4, 2, 5);
+            this.label1.Size = new System.Drawing.Size(57, 21);
             this.label1.TabIndex = 0;
-            this.label1.Text = "源目录";
+            this.label1.Text = " 源目录 ";
             // 
             // tbx_Source
             // 
-            this.tbx_Source.Location = new System.Drawing.Point(109, 32);
+            this.tbx_Source.Location = new System.Drawing.Point(87, 12);
             this.tbx_Source.Name = "tbx_Source";
             this.tbx_Source.Size = new System.Drawing.Size(300, 21);
             this.tbx_Source.TabIndex = 1;
             // 
             // tbx_Destination
             // 
-            this.tbx_Destination.Location = new System.Drawing.Point(109, 59);
+            this.tbx_Destination.Location = new System.Drawing.Point(87, 39);
             this.tbx_Destination.Name = "tbx_Destination";
             this.tbx_Destination.Size = new System.Drawing.Size(300, 21);
             this.tbx_Destination.TabIndex = 3;
@@ -64,25 +65,27 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(53, 63);
+            this.label2.Location = new System.Drawing.Point(31, 39);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(53, 12);
+            this.label2.Padding = new System.Windows.Forms.Padding(2, 4, 2, 5);
+            this.label2.Size = new System.Drawing.Size(57, 21);
             this.label2.TabIndex = 2;
             this.label2.Text = "目标目录";
             // 
             // rtx_Log
             // 
-            this.rtx_Log.Location = new System.Drawing.Point(55, 173);
+            this.rtx_Log.Location = new System.Drawing.Point(33, 104);
             this.rtx_Log.Name = "rtx_Log";
-            this.rtx_Log.Size = new System.Drawing.Size(354, 266);
+            this.rtx_Log.Size = new System.Drawing.Size(469, 334);
             this.rtx_Log.TabIndex = 4;
             this.rtx_Log.Text = "";
             // 
             // btn_Sync
             // 
-            this.btn_Sync.Location = new System.Drawing.Point(128, 127);
+            this.btn_Sync.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_Sync.Location = new System.Drawing.Point(412, 23);
             this.btn_Sync.Name = "btn_Sync";
-            this.btn_Sync.Size = new System.Drawing.Size(75, 23);
+            this.btn_Sync.Size = new System.Drawing.Size(90, 45);
             this.btn_Sync.TabIndex = 5;
             this.btn_Sync.Text = "开始同步";
             this.btn_Sync.UseVisualStyleBackColor = true;
@@ -90,15 +93,16 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(53, 89);
+            this.label3.Location = new System.Drawing.Point(31, 65);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(53, 12);
+            this.label3.Padding = new System.Windows.Forms.Padding(2, 4, 2, 5);
+            this.label3.Size = new System.Drawing.Size(57, 21);
             this.label3.TabIndex = 6;
             this.label3.Text = "过滤类型";
             // 
             // tbx_Filter
             // 
-            this.tbx_Filter.Location = new System.Drawing.Point(109, 85);
+            this.tbx_Filter.Location = new System.Drawing.Point(87, 65);
             this.tbx_Filter.Name = "tbx_Filter";
             this.tbx_Filter.Size = new System.Drawing.Size(300, 21);
             this.tbx_Filter.TabIndex = 7;
@@ -107,7 +111,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(487, 470);
+            this.ClientSize = new System.Drawing.Size(533, 470);
             this.Controls.Add(this.tbx_Filter);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.btn_Sync);
@@ -118,6 +122,7 @@
             this.Controls.Add(this.label1);
             this.Name = "FrmSync";
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.FrmSync_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
