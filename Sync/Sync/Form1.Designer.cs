@@ -121,7 +121,7 @@
             this.Controls.Add(this.tbx_Source);
             this.Controls.Add(this.label1);
             this.Name = "FrmSync";
-            this.Text = "Form1";
+            this.Text = "同步程序";
             this.Load += new System.EventHandler(this.FrmSync_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

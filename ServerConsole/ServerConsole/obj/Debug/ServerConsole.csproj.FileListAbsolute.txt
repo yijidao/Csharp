@@ -1,5 +1,0 @@
-c:\users\wzp\documents\visual studio 2015\Projects\ServerConsole\ServerConsole\bin\Debug\ServerConsole.exe.config
-c:\users\wzp\documents\visual studio 2015\Projects\ServerConsole\ServerConsole\bin\Debug\ServerConsole.exe
-c:\users\wzp\documents\visual studio 2015\Projects\ServerConsole\ServerConsole\bin\Debug\ServerConsole.pdb
-c:\users\wzp\documents\visual studio 2015\Projects\ServerConsole\ServerConsole\obj\Debug\ServerConsole.exe
-c:\users\wzp\documents\visual studio 2015\Projects\ServerConsole\ServerConsole\obj\Debug\ServerConsole.pdb
