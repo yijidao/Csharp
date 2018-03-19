@@ -41,6 +41,7 @@ namespace WindowsFormsApplication1
         {
             while (true)
             {
+
                 //string picPath = Environment.CurrentDirectory + @"\picture";
                 while (Directory.GetFiles(G_DirPath).Length > 0)
                 {
